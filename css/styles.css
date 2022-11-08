@@ -108,7 +108,7 @@ color: var(--title-color);
 
  .nav-list li:not(:last-child)
   {
-   margin-right: 50px;
+      margin-right: 50px;
  }
  
  .icons{
@@ -130,6 +130,31 @@ color: var(--title-color);
    padding-bottom: 32px;
    color:var(--title-color);
  }
+ .upper-line{
+position: relative;
+
+
+} 
+.link:hover, 
+ .link:focus{ 
+   color:#2196F3;
+   
+ }
+
+
+.upper-line  .link::after{
+   content: "";
+   position: absolute;
+   left:0;
+   bottom: -28px;
+   width: 100%;
+   height: 4px;
+   border-radius: 2px;
+   background-color: currentColor;
+      
+   
+}
+
  .portfolio{
    color: #2196F3;
  }
@@ -137,10 +162,10 @@ color: var(--title-color);
   color: #2196F3; 
  }
  
- .link:hover, 
- .link:focus{ 
-   color:#2196F3; 
- }
+ 
+
+
+
  .contact{
 font-weight: 500;
 font-size: 14px;
