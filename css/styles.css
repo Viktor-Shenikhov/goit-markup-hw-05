@@ -141,7 +141,7 @@ position: relative;
    
  }
 
-
+/* 
 .upper-line  .link::after{
    content: "";
    position: absolute;
@@ -153,13 +153,22 @@ position: relative;
    background-color: currentColor;
       
    
-}
+} */
 
- .portfolio{
+ .portfolio,
+ .studio{
    color: #2196F3;
  }
- .studio{
-  color: #2196F3; 
+ .portfolio:after,
+ .studio:after{
+   content: "";
+   position: absolute;
+   left:0;
+   bottom: -28px;
+   width: 100%;
+   height: 4px;
+   border-radius: 2px;
+   background-color: currentColor; 
  }
  
  
@@ -330,8 +339,10 @@ border-radius: 4px;
    gap:30px;
 }
  .card-box{
+   position: relative;
    width: 370px;
    border: 1px solid #EEEEEE;
+   
 } 
 
 .card-title{
@@ -351,13 +362,70 @@ letter-spacing: 0.03em;
 color: var(--primary-text-color);
 
 }
-.card-box div{
+.card-under{
    padding: 20px 24px;
+   
   
 }
-.card-box:hover{
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+.card-overlay{
+   position: relative;
+    overflow: hidden; 
 }
+
+.thumb-text{
+position: absolute;
+top: 0;
+left: 0;
+ width: 100%;
+height: 100%;
+padding:64px 23px;
+opacity: 0;
+
+font-size: 18px;
+line-height: 1.55;
+letter-spacing: 0.03em;
+color: #FFFFFF; }
+
+
+
+.card-overlay::before{
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(33, 150, 243, 0.9);
+   opacity: 1;
+   transform: translateY(100%);
+   transition-property: transform;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+     
+}
+.card-overlay:hover::before,
+ .thumb-text:hover {
+   opacity: 1;
+   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+  
+ /* .card-box:hover{
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}  */
+.card-box:hover .card-overlay::before{
+transform: translateY(0);
+} 
+/* .card-box:hover .thumb-text{
+transform: translateY(0);
+} */
+    
+
+
+ 
 
 /* BODY */
 .visually-hidden{ 
