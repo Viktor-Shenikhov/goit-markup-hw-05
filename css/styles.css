@@ -11,6 +11,9 @@ font-weight: 400;500;700
    --primary-text-color:#757575;
    --title-color:#212121;
 }
+img {
+   display: block;
+}
  .basic{
     background-color: #FFFFFF;
     font-family: Roboto,sans-serif;
@@ -18,6 +21,7 @@ font-weight: 400;500;700
     font-weight: 400;
     color: var(--primary-text-color);
     
+   
  }
  .container{
    width: 1200px;
@@ -72,8 +76,8 @@ border-bottom: 1px solid #ECECEC;
  }
  .logo{
 display: inline-block;
-padding-top: 24px;
-padding-bottom: 25px;
+/* padding-top: 24px;
+padding-bottom: 25px; */
 margin-right: 93px;
 
 font-family: Raleway,sans-serif;
@@ -86,8 +90,8 @@ color: #2196F3;
  }
   .logo-part{
 display: inline-block;
-padding-top: 24px;
-padding-bottom: 25px; 
+/* padding-top: 24px;
+padding-bottom: 25px;  */
 color: #000000; }
 
  .nav-list{
@@ -158,7 +162,7 @@ position: relative;
    content: "";
    position: absolute;
    left:0;
-   bottom: -28px;
+   bottom: 0;
    width: 100%;
    height: 4px;
    border-radius: 2px;
